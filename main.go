@@ -1,10 +1,10 @@
 package main
 
-import "go-basics/slices"
+import "go-basics/maps"
 
 func main() {
 
-	//slices.SliceLearn()
-	slices.SortedSlice()
-	slices.VariadicFund("Hi", "sdhfsdf", "fdgasdfgasdf", "dfgsfdg")
+	maps.PrintBasicMap()
+	maps.MapCounter()
+	maps.Grouping()
 }
