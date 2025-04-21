@@ -7,4 +7,5 @@ func main() {
 	maps.PrintBasicMap()
 	maps.MapCounter()
 	maps.Grouping()
+	maps.InvertMap()
 }

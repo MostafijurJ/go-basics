@@ -80,3 +80,24 @@ func Grouping() {
 	fmt.Println("-------------- leaving Grouping --------------")
 
 }
+
+func InvertMap() {
+	fmt.Println("-------------- InvertMap --------------")
+
+	countryCodes := map[string]string{
+		"BD": "Bangladesh",
+		"US": "United States",
+		"IN": "India",
+		"JP": "Japan",
+	}
+
+	inverted := make(map[string]string)
+	for code, country := range countryCodes {
+		inverted[country] = code
+	}
+
+	fmt.Println("Original Map:", countryCodes)
+	fmt.Println("Inverted Map:", inverted)
+
+	fmt.Println("-------------- leaving InvertMap --------------")
+}
