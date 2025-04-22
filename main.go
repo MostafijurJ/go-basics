@@ -9,4 +9,5 @@ func main() {
 	//maps.Grouping()
 	//maps.InvertMap()
 	maps.ZeroValues()
+	maps.MapsKeyValidation()
 }
