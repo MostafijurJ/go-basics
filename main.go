@@ -4,8 +4,9 @@ import "go-basics/maps"
 
 func main() {
 
-	maps.PrintBasicMap()
-	maps.MapCounter()
-	maps.Grouping()
-	maps.InvertMap()
+	//maps.PrintBasicMap()
+	//maps.MapCounter()
+	//maps.Grouping()
+	//maps.InvertMap()
+	maps.ZeroValues()
 }
