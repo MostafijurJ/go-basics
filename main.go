@@ -1,13 +1,12 @@
 package main
 
-import "go-basics/maps"
+import (
+	"go-basics/goRoutines"
+	"go-basics/logging"
+)
 
 func main() {
 
-	//maps.PrintBasicMap()
-	//maps.MapCounter()
-	//maps.Grouping()
-	//maps.InvertMap()
-	maps.ZeroValues()
-	maps.MapsKeyValidation()
+	goRoutines.RunFunctions()
+	logging.LogFile()
 }
