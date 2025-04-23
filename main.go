@@ -1,12 +1,10 @@
 package main
 
 import (
-	"go-basics/goRoutines"
-	"go-basics/logging"
+	"go-basics/dataTypes"
 )
 
 func main() {
 
-	goRoutines.RunFunctions()
-	logging.LogFile()
+	dataTypes.ErrorHandle()
 }
