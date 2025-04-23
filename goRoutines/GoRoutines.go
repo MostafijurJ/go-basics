@@ -15,7 +15,7 @@ func RunFunctions() {
 
 func runGoRoutinesMethods() {
 	fmt.Println("--------------  In Go Routines Start ------------------- ")
-	for i := 1; i < 6; i++ {
+	for i := 1; i <= 5; i++ {
 		go printAsync(i, FixedValue) // create separate thread for each call
 	}
 
@@ -26,7 +26,7 @@ func runGoRoutinesMethods() {
 
 func runGeneralMethod() {
 	fmt.Println("------------------- In general run method  Start ---------------------")
-	for i := 1; i < 6; i++ {
+	for i := 1; i <=5 ; i++ {
 		printAsync(i, FixedValue)
 	}
 
