@@ -18,7 +18,7 @@ func ErrorHandle(){
 
 func check(a,b int) error {
 	if a == 0 || b == 0 {
-		return errors.New("Both values are Zero, Try with another")
+		return errors.New("both values are zero, try with another")
 	}
 
 	return nil
