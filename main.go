@@ -1,12 +1,8 @@
 package main
 
-import (
-	"go-basics/dataTypes"
-	"go-basics/slices"
-)
+import generics "go-basics/generics"
 
 func main() {
 
-	slices.CallingSlice()
-	dataTypes.ErrorHandle()
+	generics.CallGenerics()
 }
