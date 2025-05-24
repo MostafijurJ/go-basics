@@ -1,8 +1,8 @@
 package main
 
-import generics "go-basics/generics"
+import "go-basics/variables"
 
 func main() {
 
-	generics.CallGenerics()
+	variables.PrintVariables()
 }

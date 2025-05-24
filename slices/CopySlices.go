@@ -5,8 +5,7 @@ import (
 	"sort"
 )
 
-
-func CallingSlice(){
+func CallingSlice() {
 
 	copySlices()
 	sliceSorting()
@@ -39,7 +38,7 @@ func sliceSorting() {
 
 	sort.Ints(sInts)
 	fmt.Println("sInts:", sInts)
-	
+
 	sort.Sort(sort.Reverse(sort.IntSlice(sInts)))
 	fmt.Println("Reverse:", sInts)
 
@@ -50,11 +49,10 @@ func sliceSorting() {
 	sort.Sort(sort.Reverse(sort.Float64Slice(sFloats)))
 	fmt.Println("Reverse:", sFloats)
 
-
 	fmt.Println("sStrings original:", sStrings)
 	sort.Strings(sStrings)
 	fmt.Println("sStrings:", sStrings)
-	
+
 	sort.Sort(sort.Reverse(sort.StringSlice(sStrings)))
 	fmt.Println("Reverse:", sStrings)
 
