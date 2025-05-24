@@ -1,6 +1,9 @@
 package variables
 
-import "fmt"
+import (
+	"fmt"
+	"math/rand"
+)
 
 func PrintVariables() {
 	cards := newDeck()
@@ -17,7 +20,7 @@ func (d deck) print() {
 
 func newDeck() deck {
 	suits := []string{"Spades", "Diamonds", "Hearts", "Clubs"}
-	ranks := []string{"Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King"}
+	ranks := []string{"Ace", "Two", "Three", "Four", "Five"}
 
 	cards := deck{}
 	for _, suit := range suits {
@@ -27,4 +30,12 @@ func newDeck() deck {
 	}
 
 	return cards
+}
+
+func (d deck) shuffle() {
+	for i := range d {
+		newPosition := rand.Intn(len(d) - 1)
+		d[i], d[newPosition] = d[newPosition], d[i]
+	}
+	fmt.Println("Deck shuffled")
 }
