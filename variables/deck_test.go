@@ -19,4 +19,6 @@ func TestNewDeck(t *testing.T) {
 		t.Errorf("Expected last card to be '%s', but got '%s'", expectedLastCard, d[len(d)-1])
 	}
 
+	d.shuffle()
+
 }
