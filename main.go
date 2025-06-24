@@ -1,8 +1,10 @@
 package main
 
-import "go-basics/variables"
+import (
+	_defer "go-basics/defer"
+)
 
 func main() {
 
-	variables.PrintVariables()
+	_defer.DeferExample()
 }
