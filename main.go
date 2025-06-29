@@ -1,10 +1,7 @@
 package main
 
-import (
-	_defer "go-basics/defer"
-)
+import "go-basics/errorHandling"
 
 func main() {
-
-	_defer.DeferExample()
+	errorHandling.CallError()
 }
