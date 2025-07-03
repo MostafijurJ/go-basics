@@ -1,6 +1,7 @@
 package errorHandling
 
 import (
+	"errors"
 	"fmt"
 	"time"
 )
@@ -8,10 +9,11 @@ import (
 func CallError() {
 	fmt.Println("~~~~~~~~~~~ Starting Error Handling ~~~~~~~~~~~")
 
-	handleDefer()
-	panicInGoRouting()
-	panicInGoRoutingWithoutRecovery()
+	//handleDefer()
+	//panicInGoRouting()
+	//panicInGoRoutingWithoutRecovery()
 
+	customErrorHandling()
 	fmt.Println("~~~~~~~~~~~ End of Error Handling ~~~~~~~~~~~")
 }
 
@@ -53,4 +55,30 @@ func panicInGoRoutingWithoutRecovery() {
 
 	time.Sleep(1 * time.Second)
 	fmt.Println("Main function continues without recovery")
+}
+
+type ValidationError struct {
+	Field string
+	Msg   string
+}
+
+func (e *ValidationError) Error() string {
+	return fmt.Sprintf("Validation failed on field '%s': %s", e.Field, e.Msg)
+}
+func validate(name string) error {
+	if name == "" {
+		return &ValidationError{Field: "name", Msg: "cannot be empty"}
+	}
+	return nil
+}
+
+func customErrorHandling() {
+	err := validate("")
+	if err != nil {
+		fmt.Println(err)
+		var ve *ValidationError
+		if errors.As(err, &ve) {
+			fmt.Println("Custom error field:", ve.Field)
+		}
+	}
 }
